@@ -549,7 +549,7 @@ def _store_cached_ai_prediction(cache_key, result, region=None, latest_period=No
     return copy.deepcopy(cached_result)
 
 def _load_or_create_secret_key():
-    env_secret = os.environ.get("SECRET_KEY")
+    env_secret = os.environ.get("SECRET_KEY") or os.environ.get("SESSION_SECRET")
     if env_secret:
         return env_secret
 
