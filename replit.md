@@ -7,6 +7,9 @@
   it does not change or delete the environment variable or any external database.
 - The Flask web app listens on `0.0.0.0:5000` and appears in Preview.
 - Dependencies are listed in `requirements.txt`.
+- On a fresh import, install the Python dependencies from `requirements.txt`
+  before starting the workflow. If startup reports `No module named 'flask'`,
+  the dependencies have not been installed in the current environment.
 - Startup initializes the existing SQLite database at `data/lottery_system.db`.
   Runtime data is excluded from Git. No external database is required.
 - Session signing uses `SECRET_KEY`, or Replit's existing `SESSION_SECRET`.
